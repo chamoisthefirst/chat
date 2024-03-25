@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title id="title">Login</title>
+        <link rel="stylesheet" type="text/css" href="darkmode.css">
+    </head>
+    <body id="login">
+        <h1>Login</h1>
+        <input id="username" placeholder="username">
+        <input id="password" placeholder="password" type="password">
+        <h4 id="register">Don't have an account? <a href="./sign%20up.html">sign up here!</a></h3>
+        <button id="login_button" onClick="login(document.getElementById('username').value,document.getElementById('password').value)"><h3>Login</h3></button>
+        <script>
+            function del(){
+                localStorage.removeItem("userId")
+            }
+
+            let storage = {}
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if(this.readyState == 4 && this.status == 200){
+                    storage = JSON.parse(xhttp.responseText)
+                }
+            }
+            xhttp.open("GET", "storage.json",true);
+            xhttp.send();
+
+            function save(){
+                const options = {
+                    "method": 'POST',
+                    headers:{
+                        "content-type":"application/json"
+                    },
+                    "body":JSON.stringify(storage)
+                }
+                fetch('/api', options)
+            }
+
+            function login(name,pass){
+                name = name.toLowerCase()
+            for(var i = 0; i < storage.users.length; i++){
+                if(storage.users[i].name.toLowerCase() === name){
+                    console.log(`account found: ${JSON.stringify(storage.users[i])}`)
+                    if(storage.users[i].password === pass){
+                        console.log("correct pass")
+                        localStorage.userId = i
+                        storage.users[i].timeout = Date.now()+1800000
+                        save()
+                        window.location.replace("./index.html")
+                    }else{
+                        return console.log("incorrect password")
+                    }
+                }
+            }
+            return console.log("no user found with that username")
+
+            }
+
+            document.getElementById("username").onkeyup = (e)=>{
+            if(e.key != "Enter")return;
+            login(document.getElementById("username").value,document.getElementById("password").value)
+            }
+
+            document.getElementById("password").onkeyup = (e)=>{
+            if(e.key != "Enter")return;
+            login(document.getElementById("username").value,document.getElementById("password").value)
+            }
+        </script>
+    </body>
+</html>
