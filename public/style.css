@@ -1,0 +1,108 @@
+body{
+    background-color:#2e2e2e;
+    color:aliceblue;
+    font-family:Whitney;
+}
+
+/*channel name*/
+#channel{
+    position:fixed;
+    top:0px;
+    left:21vw;
+}
+
+/*message section*/
+#message{
+    background-color:#333333;
+    position:fixed;
+    left:21vw;
+    top:10vh;
+    width:80vw;
+    height:83vh;
+    overflow-y:scroll;
+}
+
+/*input bar*/
+#input{
+    position:fixed;
+    bottom:10px;
+    left:21vw;
+    width:77vw;
+    background-color:#303030;
+    color:aliceblue;
+}
+
+/*navigation buttons*/
+
+#nav{
+    position:fixed;
+    top:0px;
+    left:0;
+    width:20vw;
+    height:100vh;
+    background-color:#272727;
+}
+
+.nav_button{
+    position:fixed;
+    left:1vw;
+    width: 18vw;
+    height:2em;
+    margin-top: 20px;
+    background-color:#0000;
+    color:#ddd;
+    border:none;
+    text-align:left;
+}
+
+.cur_channel{
+    background-color:#373737;
+}
+
+
+
+
+/*--------- login ---------*/
+.red{
+    color:#ad0000;
+}
+
+.hidden{
+    display:none !important;
+}
+
+.linput{
+    background-color: #333333;
+    color:aliceblue;
+    width:20vw;
+    height:3em;
+    margin-left:15vw;
+    border:none;
+    border-radius:5em;
+}
+
+#login{
+    text-align: center;
+}
+
+#alert{
+    text-align:right;
+}
+
+#l1{
+    background-color:#272727;
+    justify-content:center;
+    width:50vw;
+    height:60vh;
+    margin-left:25vw;
+    margin-top:20vh;
+    border-radius:5em;
+}
+
+#l2{
+    height:20vh;
+}
+
+#password{
+    margin-top:2em;
+}
