@@ -1,22 +1,8 @@
 {
-  "name": "chat-app",
-  "version": "1.0.0",
-  "description": "chat app",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "json:server": "json-server --watch storage.json"
-  },
-  "author": "Chamoisthefirst",
-  "license": "MIT",
   "dependencies": {
-    "express": "^4.19.1",
-    "fs": "^0.0.1-security",
-    "json-server": "^1.0.0-alpha.23"
-  },
-  "keywords": [
-    "test",
-    "data",
-    "chat"
-  ]
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security"
+  }
 }
