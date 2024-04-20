@@ -1,0 +1,61 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "username": "guest",
+      "password": "0000",
+      "timestamp": 1713623546814
+    },
+    {
+      "id": 1,
+      "username": "chamois",
+      "password": "1234",
+      "timestamp": 1713619215600
+    }
+  ],
+  "logs": [
+    {
+      "timestamp": 1713623546352,
+      "success": true,
+      "user": {
+        "id": 0,
+        "name": "guest"
+      }
+    },
+    {
+      "timestamp": 1713623579426,
+      "success": false,
+      "user": {
+        "id": 0,
+        "name": "nonya"
+      }
+    },
+    {
+      "timestamp": 1713623701878,
+      "success": false,
+      "user": {
+        "id": 0,
+        "name": "none ya beez wax"
+      },
+      "error": "username not found"
+    },
+    {
+      "timestamp": 1713623735943,
+      "success": false,
+      "user": {
+        "id": 0,
+        "name": "chamois"
+      },
+      "error": "username not found"
+    },
+    {
+      "timestamp": 1713623833594,
+      "success": false,
+      "user": {
+        "id": 0,
+        "name": "chamois"
+      },
+      "error": "username not found"
+    }
+  ]
+}
