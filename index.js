@@ -1,5 +1,9 @@
 //This isn't too much to do for one's crush is it? <3
 
+/**setup**/
+
+const guildId=""
+
 /**node modules**/
 
 //setting up discord.js
@@ -104,7 +108,7 @@ function sensor(message){
     }
     if(passes === true)return;
     message.delete()
-    if(message.guild.id == "1224924341398143058"){
+    if(message.guild.id == guildId){
         sendHook({
         username:message.author.username,
         avatarURL:message.member?.displayAvatarURL(),
@@ -225,7 +229,7 @@ app.post("/login",(data,responce) =>{
   client.on("messageCreate", async (message) => {
     
     if(message.author.bot)return;
-    if(message.guild.id != "1224924341398143058")return;
+    if(message.guild.id != guildId)return;
 
 
     const msg = {
